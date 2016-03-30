@@ -7,4 +7,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^(\d+)', 'cms.views.id_to_page'),
+    url(r'/?(.*)', 'cms.views.name_to_page')
 )
